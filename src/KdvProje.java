@@ -2,19 +2,28 @@ import java.util.Scanner;
 
 public class KdvProje {
     public static void main(String[] args) {
-        double tutar,kdvTutari,kdvliTutar,kdvsizTutar,kdv1=0.18,kdv2=0.08;
+
         Scanner input= new Scanner(System.in);
-        System.out.print("Bir Tutar Giriniz :");
-        tutar= input.nextInt();
 
-        boolean durum1= tutar <1000;
-        boolean durum2= tutar >1000;
-        double dFiyat= tutar*kdv2;
-        double yFiyat= tutar*kdv1;
-        boolean girilenTutar = durum1 || durum2;
+        double girilenTutar, kdvOrani= 0.18,kdvOrani2= 0.08;
+
+        System.out.print("Lütfen bir tutar giriniz: ");
+        girilenTutar= input.nextDouble();
+
+        boolean kdvliTutar= girilenTutar>=1000;
+
+        //durum1, girilen tutar 1000den fazla ise;
+        double durum1= (girilenTutar*kdvOrani2);
+
+        //durum2, girilen para 1000den az ise;
+        double durum2= (girilenTutar*kdvOrani);
+
+        double sonuc= (kdvliTutar) ? durum1:durum2;
+
+        System.out.println("KDV tutari: " + sonuc);
+        System.out.println("KDV dahil tutar: " +(girilenTutar+sonuc));
 
 
-        String str = girilenTutar ? "Kdv Tutari: "+dFiyat :"Kdv Tutari:"+yFiyat;
-        System.out.println(str);
+
     }
 }
