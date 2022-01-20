@@ -17,7 +17,7 @@ public class UcgenAlani {
         c=girdi.nextInt();
 
         int cevre= a+b+c;
-        // aCevre, alani hesaplamak icin cevrenin yarisi alinmitir
+        // aCevre: alani hesaplamak icin cevrenin yarisidir.
         int aCevre= (a+b+c)/2;
         System.out.println("Ucgenin Cevresi: " + cevre);
 
