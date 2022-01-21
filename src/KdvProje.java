@@ -2,21 +2,21 @@ import java.util.Scanner;
 
 public class KdvProje {
     public static void main(String[] args) {
-        double tutar,kdv1=0.18,kdv2=0.08;
+        double tutar, kdvOrani;
+        Scanner input = new Scanner(System.in);
 
-        Scanner input= new Scanner(System.in);
-        System.out.print("Bir Tutar Giriniz :");
-        tutar= input.nextInt();
+        System.out.print("Tutarı Girin: ");
+        tutar = input.nextDouble();
 
-        boolean sonuc1= !(tutar<1000);
-        boolean sonuc2= tutar>=1000;
+        boolean kdv = tutar > 1000;
+        kdvOrani = kdv ? 0.08 : 0.18 ;
 
-        double dFiyat= tutar*kdv2;
-        double yFiyat= tutar*kdv1;
-        boolean girilenTutar = sonuc2 || sonuc1;
+        double kdvTutari = tutar * kdvOrani;
+
+        System.out.println("KDV'li Fiyat: " + (tutar+ kdvTutari));
+        System.out.println("KDV'siz Fiyat: " + tutar );
+        System.out.println("KDV' Tutarı: " + kdvTutari);
 
 
-        String str = girilenTutar ? ("Sonuc: " + dFiyat) : ("Sonuc: " + yFiyat);
-        System.out.println(str);
     }
 }
