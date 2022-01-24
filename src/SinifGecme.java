@@ -2,24 +2,23 @@ import java.util.Scanner;
 
 public class SinifGecme {
     public static void main(String[] args) {
-        int mat, fizik, turkce, kimya, muzik,count=0,toplam=0;
+        int mat, fizik, turkce, kimya, muzik, count = 0, toplam = 0;
         Scanner input = new Scanner(System.in);
 
         System.out.print("Matematik Notunuzu Giriniz: ");
         mat = input.nextInt();
         if (mat <= 0 || mat >= 100) {
 
-        }else {
+        } else {
             count++;
             toplam += mat;
         }
 
 
-
         System.out.print("Fizik Notunuzu Giriniz: ");
         fizik = input.nextInt();
         if (fizik <= 0 || fizik >= 100) {
-        }else {
+        } else {
             count++;
             toplam += fizik;
         }
@@ -27,15 +26,15 @@ public class SinifGecme {
         System.out.print("Türkce Notunuzu Giriniz: ");
         turkce = input.nextInt();
         if (turkce <= 0 || turkce >= 100) {
-        }else {
+        } else {
             count++;
-            toplam+=turkce;
+            toplam += turkce;
         }
 
         System.out.print("Kimya Notunuzu Giriniz: ");
         kimya = input.nextInt();
         if (kimya <= 0 || kimya >= 100) {
-        }else {
+        } else {
             count++;
             toplam += kimya;
         }
@@ -43,12 +42,12 @@ public class SinifGecme {
         System.out.print("Müzik Notunuzu Giriniz: ");
         muzik = input.nextInt();
         if (muzik <= 0 || muzik >= 100) {
-        }else {
+        } else {
             count++;
             toplam += muzik;
         }
 
-        double average= (toplam / count);
+        double average = (toplam / count);
 
         if (average >= 55) {
             System.out.println("Tebrikler Sinifi Gectiniz !");
