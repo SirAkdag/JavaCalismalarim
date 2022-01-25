@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalismaSinifi {
+public class BurcHesaplamaProjesi {
     public static void main(String[] args) {
         int day, month;
         String burc = "";
