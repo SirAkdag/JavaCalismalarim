@@ -28,27 +28,21 @@ public class AtmProjesi {
                         case 2:
                             System.out.print("\nLütfen Cekmek Istediginiz Tutari Giriniz: ");
                             cikis = input.nextDouble();
-                            if (cikis<balance){
+                            if (cikis < balance) {
                                 balance -= cikis;
                                 System.out.println("\nLütfen Paranizi Sag Alttaki Hazneden Aliniz.");
 
-                            }else {
+                            } else {
                                 System.out.print("\nYetersiz Bakiye. Lütfen Gecerli Bir Miktar Giriniz.\n");
                             }
-
                             break;
-
-
                         case 3:
                             System.out.println("\nGüncel Bakiyeniz : " + balance);
                             break;
                     }
-
-
                 } while (button != 4);
                 System.out.println("\nBizi Tercih Ettiginiz Icin Tesekkürler !\n\nIyi Günler Emre Bey.\n\n");
                 break;
-
             } else {
                 credit--;
                 System.out.println("\nHatali Kullanici Adi veya Parola.\n\nLütfen Bilgilerinizi Kontrol Edip Tekrar Deneyiniz !");
@@ -57,9 +51,6 @@ public class AtmProjesi {
                     System.out.print("Hesabiniz Bloke Edilmistir. Lütfen Bankanizla Iletisime Geciniz !");
                 }
             }
-
-
         }
-
     }
 }
