@@ -13,15 +13,24 @@ public class MinMaxDeger {
             numberCount++;
 
             if (tempNumber > buyuk) {
+                if (kucuk == 0) {
+                    kucuk = tempNumber;
+                }
                 buyuk = tempNumber;
+<<<<<<< HEAD
 
             }else if (tempNumber < kucuk ) {
+=======
+            }
+            if (tempNumber < kucuk) {
+                if (buyuk == 0){
+                    buyuk = tempNumber;
+                }
+>>>>>>> refs/remotes/origin/master
                 kucuk = tempNumber;
             }
         }
         System.out.println("\nEn Büyük: " + buyuk);
         System.out.println("En Kücük: " + kucuk);
-
-
     }
 }
