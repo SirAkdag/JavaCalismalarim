@@ -17,16 +17,15 @@ public class MinMaxDeger {
                     kucuk = tempNumber;
                 }
                 buyuk = tempNumber;
-<<<<<<< HEAD
 
-            }else if (tempNumber < kucuk ) {
-=======
+
+            } else if (tempNumber < kucuk) {
+
             }
             if (tempNumber < kucuk) {
-                if (buyuk == 0){
+                if (buyuk == 0) {
                     buyuk = tempNumber;
                 }
->>>>>>> refs/remotes/origin/master
                 kucuk = tempNumber;
             }
         }
