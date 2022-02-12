@@ -3,22 +3,17 @@ import java.util.Scanner;
 public class calisma {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int N;
-        System.out.print(" sayi");
-        N = input.nextInt();
-        int result = N % 2;
+        int n, temp =0;
+        System.out.print("sayi: ");
+        n = input.nextInt();
 
-        if (result != 0 ) {
-            System.out.println("Weird");
+        for (int x = n; x >= -4; x -= 5) {
+            temp=x;
+            System.out.println(x);
         }
-        if (result == 0) {
-            if (N > 2 && N < 5) {
-                System.out.println("Not Weird");
-            }else if (N >6 && N <= 20){
-                System.out.println("Weird");
-            }else if (N > 20){
-                System.out.println("Not Weird");
-            }
+        for (int y = temp+5; y <= n; y += 5) {
+            System.out.println(y);
         }
+
     }
 }
