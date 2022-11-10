@@ -12,7 +12,7 @@ public class AsalSayi {
                 }
             }
             if (!isTrue)
-                System.out.print(num + " ");
+                System.out.print(num + "  ");
         }
 
 
